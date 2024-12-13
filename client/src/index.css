@@ -88,10 +88,11 @@ div.loading {
   background-repeat: no-repeat;
   height: 100vh; /* Full viewport height */
   width: 100vw; /* Full viewport width */
+  padding-left: 7%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center; /* Center the heading */
   padding-top: 80px; /* Adjust padding as needed */
   overflow-y: auto; /* Allow scrolling if content overflows */
   position: relative; /* Ensure the container is positioned relative */
@@ -102,11 +103,32 @@ div.loading {
   position: relative; /* Ensure the content is positioned relative */
   z-index: 2; /* Ensure the content is on top of the background image */
   color: #fff; /* Ensure the text is visible on the background */
+  width: 100%; /* Ensure the content takes full width */
+  padding: 0 20px; /* Add padding to the sides if needed */
+}
+
+.user-shops-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minmax value as needed */
+  gap: 30px; /* Add space between items */
+  width: 100%; /* Ensure the items take full width */
+  justify-content: center; /* Center the items horizontally */
+  align-items: center;
+}
+
+.user-shops-item {
+  background-color: rgba(0, 0, 0, 0.5); /* Translucent background */
+  color: #fff; /* Text color */
+  padding: 20px; /* Padding inside the box */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text inside the box */
 }
 
 .wine-shops-title {
-  color: #C3965D; /* Adjust text color for visibility */
-  margin-bottom: 20px; /* Adjust spacing as needed */
+  margin-bottom: 50px;
 }
  
 .btn {
@@ -126,6 +148,10 @@ p {
   color: #ffffffd6
 }
 
-.form-label {
-  color: #C3965D;
+.white-font {
+  color: #ffffffd6
 }
+
+/* .form-label {
+  color: #C3965D;
+} */

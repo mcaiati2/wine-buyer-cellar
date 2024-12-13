@@ -58,12 +58,12 @@ function ShopForm() {
         {formData.error_message && <p className="text-danger text-center">{formData.error_message}</p>}
 
         <div className="mb-3">
-          <label htmlFor="name-input" className="form-label">Name</label>
+          <label htmlFor="name-input" className="form-label white-font">Name</label>
           <input onChange={handleInputChange} value={formData.name} name="name" type="text" className="form-control" id="input" />
         </div>
 
         <div className="mb-3">
-          <label htmlFor="address-input" className="form-label">Address</label>
+          <label htmlFor="address-input" className="form-label white-font">Address</label>
           <input onChange={handleInputChange} value={formData.address} name="address" type="text" className="form-control" id="address-input" />
         </div>
 

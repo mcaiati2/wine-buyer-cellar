@@ -21,15 +21,15 @@ function UserShops() {
   return (
     <section className="user-shops-container">
       <div className="user-shops-content">
-        <h1 className="text-center">View Your Shops</h1>
-        <section className="row">
+        <h1 className="text-center wine-shops-title">View Your Shops</h1>
+        <section className="user-shops-items">
           {!shops.length && <h4 className="ms-4 mt-3 fw-light">You haven't created any shops.</h4>}
 
           {Array.isArray(shops) && shops.map(shop => (
-            <article key={shop.id} className="col-4 d-flex flex-column align-items-center">
+            <article key={shop.id} className="user-shops-item"> {/* Apply the translucent box class */}
               <h3>{shop.name}</h3>
               <p>Location: {shop.address}</p>
-              <div className="d-flex justify-content-center">
+              <div className="d-flex justify-content-start"> {/* Justify content to the start (left) */}
                 <NavLink className="btn btn-primary" to={`/shop/${shop.id}`}>View Shop</NavLink>
               </div>
             </article>
