@@ -69,7 +69,7 @@ function WineForm() {
           <input onChange={handleInputChange} name="price" type="number" className="form-control" id="price-input" />
         </div>
 
-        <NavLink to={`/shop/${location.state.shop_id}`} type="submit" className="btn btn-secondary me-3">Cancel</NavLink>
+        {/* <NavLink to={`/shop/${location.state.shop_id}`} type="submit" className="btn btn-secondary me-3">Cancel</NavLink> */}
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
     </section>

@@ -27,7 +27,7 @@ function Header() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
       <div className="container-fluid navbar-style">
         <NavLink className="navbar-brand" to="/">Wine Buyer Cellar</NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@ function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto d-flex align-items-center">
-            {state.user && <p className="m-0 pe-4 align-middle">Welcome, {state.user.first_name}</p>}
+            {state.user && <p className="m-0 pe-4 align-middle">Welcome, {state.user.first_name}!</p>}
 
             <NavLink className="nav-link" to="/">Home</NavLink>
 

@@ -7,7 +7,7 @@ import { Shop as ShopInterface } from '../interfaces';
 
 function Shop() {
   const [shop, setShop] = useState<ShopInterface | null>(null);
-  const [message, setMessage] = useState('No wines have been added for shop. Click \'Add Wine\' above to add a new wine!');
+  const [message, setMessage] = useState('No wines have been added for this shop. Click \'Add Wine\' above to add a new wine!');
   const params = useParams();
   const navigate = useNavigate();
   
@@ -55,7 +55,7 @@ function Shop() {
           <hr />
   
           {Array.isArray(shop.Wines) && shop.Wines.length ? (
-            <div className="row">
+            <div className="row gap-insert">
               {shop.Wines.map(wine => (
                 <article key={wine.id} className="col-3 d-flex flex-column align-items-center wine-item">
                   <h4 className="fw-lighter text-decoration-underline white-font">{wine.brand}</h4>

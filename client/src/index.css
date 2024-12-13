@@ -14,12 +14,30 @@ html, body {
 
 /* Navbar styles */
 .navbar {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100px !important; /* Increase the height of the navbar */
 }
 
 nav a.active, nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline !important;
+}
+
+.custom-navbar {
+  margin: 0 !important;
+  font-size: 1.25rem !important; /* Increase font size */
+  height: 100px !important; /* Ensure the custom-navbar class also has the increased height */
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.75rem !important; /* Increase font size for the brand */
+  text-decoration: none !important;
+  line-height: 100px !important; /* Vertically center the brand text */
+}
+
+.custom-navbar .navbar-nav .nav-link {
+  font-size: 1.25rem !important; /* Increase font size for the nav links */
+  line-height: 100px !important; /* Vertically center the nav links */
 }
 
 .navbar-brand {
@@ -27,7 +45,7 @@ nav a.active, nav a:hover {
 }
 
 .navbar-style {
-  background-color: #C3965D;
+  background-color: #C3965D !important;
 }
 
 div.loading {
@@ -130,7 +148,7 @@ div.loading {
 .user-shops-items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minmax value as needed */
-  gap: 30px; /* Add space between items */
+  gap: 10px; /* Add space between items */
   width: 100%; /* Ensure the items take full width */
   justify-content: center; /* Center the items horizontally */
   align-items: center;
@@ -161,6 +179,7 @@ div.loading {
   align-items: center; /* Center items horizontally */
   text-align: center; /* Center text inside the box */
   margin-bottom: 20px; /* Add margin to separate items */
+ 
 }
 
 .add-wine-page {
@@ -176,6 +195,10 @@ div.loading {
   align-items: center;
   padding-top: 80px; /* Adjust padding as needed */
   overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.gap-insert {
+  gap: 10px;
 }
  
 .btn {

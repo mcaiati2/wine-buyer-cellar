@@ -10,7 +10,7 @@ const initialFormData = {
   last_name: '',
   email: '',
   password: '',
-  age: 18,
+  age: '',
   error_message: ''
 }
 

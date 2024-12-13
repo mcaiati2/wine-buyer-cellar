@@ -27,7 +27,7 @@ function UserShops() {
 
           {Array.isArray(shops) && shops.map(shop => (
             <article key={shop.id} className="user-shops-item"> {/* Apply the translucent box class */}
-              <h3>{shop.name}</h3>
+              <h3 className="fw-light text-decoration-underline white-font">{shop.name}</h3>
               <p>Location: {shop.address}</p>
               <div className="d-flex justify-content-start"> {/* Justify content to the start (left) */}
                 <NavLink className="btn btn-primary" to={`/shop/${shop.id}`}>View Shop</NavLink>

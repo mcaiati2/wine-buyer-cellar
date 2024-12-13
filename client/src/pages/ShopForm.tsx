@@ -59,7 +59,7 @@ function ShopForm() {
 
         <div className="mb-3">
           <label htmlFor="name-input" className="form-label white-font">Name</label>
-          <input onChange={handleInputChange} value={formData.name} name="name" type="text" className="form-control" id="input" />
+          <input onChange={handleInputChange} value={formData.name} name="name" type="text" className="form-control" id="input" required />
         </div>
 
         <div className="mb-3">
@@ -67,7 +67,7 @@ function ShopForm() {
           <input onChange={handleInputChange} value={formData.address} name="address" type="text" className="form-control" id="address-input" />
         </div>
 
-        <NavLink to={`${state ? `/shop/${state.shop.id}` : '/shops'}`} type="submit" className="btn btn-secondary me-3">Cancel</NavLink>
+        {/* <NavLink to={`${state ? `/shop/${state.shop.id}` : '/shops'}`} type="submit" className="btn btn-secondary me-3">Cancel</NavLink> */}
         <button type="submit" className="btn btn-primary">{state ? 'Save' : 'Submit'}</button>
       </form>
     </section>
