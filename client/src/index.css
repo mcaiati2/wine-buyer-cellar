@@ -66,6 +66,23 @@ div.loading {
   
 }
 
+.view-shops-container {
+  background-image: url('/images/wine-shelves.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between elements */
+  align-items: center;
+  padding-top: 80px; /* Adjust padding as needed */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+
+
 .wine-shops-container {
   background-image: url('/images/wine-shelves.jpg');
   background-size: cover;
@@ -80,6 +97,9 @@ div.loading {
   padding-top: 80px; /* Adjust padding as needed */
   overflow-y: auto; /* Allow scrolling if content overflows */
 }
+.no-shops-message {
+  white-space: nowrap; /* Prevent text from wrapping */
+} 
 
 .user-shops-container {
   background-image: url('/images/wine-shelves.jpg');
@@ -129,6 +149,33 @@ div.loading {
 
 .wine-shops-title {
   margin-bottom: 50px;
+}
+
+.wine-item {
+  background-color: rgba(0, 0, 0, 0.5); /* Translucent background */
+  color: #fff; /* Text color */
+  padding: 20px; /* Padding inside the box */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text inside the box */
+  margin-bottom: 20px; /* Add margin to separate items */
+}
+
+.add-wine-page {
+  background-image: url('/images/cellar.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between elements */
+  align-items: center;
+  padding-top: 80px; /* Adjust padding as needed */
+  overflow-y: auto; /* Allow scrolling if content overflows */
 }
  
 .btn {

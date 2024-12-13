@@ -23,7 +23,7 @@ function UserShops() {
       <div className="user-shops-content">
         <h1 className="text-center wine-shops-title">View Your Shops</h1>
         <section className="user-shops-items">
-          {!shops.length && <h4 className="ms-4 mt-3 fw-light">You haven't created any shops.</h4>}
+        {!shops.length && <h4 className="ms-4 mt-3 fw-light no-shops-message">You haven't created any shops.</h4>}
 
           {Array.isArray(shops) && shops.map(shop => (
             <article key={shop.id} className="user-shops-item"> {/* Apply the translucent box class */}

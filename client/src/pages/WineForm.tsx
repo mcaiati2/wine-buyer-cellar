@@ -42,7 +42,7 @@ function WineForm() {
   };
 
   return (
-    <section className="row">
+    <section className="row add-wine-page white-font">
       <form onSubmit={handleSubmit} className="col-4 mx-auto mt-5">
         <h2 className="text-center">Add Wine</h2>
         <p className="text-center fst-italic">{location.state.shop_name}</p>
