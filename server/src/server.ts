@@ -5,6 +5,9 @@ import cookieParser from 'cookie-parser';
 
 import routes from './routes/api/index.js';
 
+dotenv.config();
+
+
 const app = express();
 const PORT = process.env.PORT || 3333;
 
