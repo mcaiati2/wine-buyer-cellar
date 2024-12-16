@@ -18,11 +18,5 @@ if (process.env.PORT) {
         res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
     });
 }
-try {
-    await client.sync({ force: false });
-    console.log('Database synced successfully');
-}
-catch (error) {
-    console.error('Error syncing database:', error);
-}
-app.listen(PORT, () => console.log(`Express server started on port ${PORT}`));
+await client.sync({ force: false });
+app.listen(PORT, () => console.log('Express server started'));

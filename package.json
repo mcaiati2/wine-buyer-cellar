@@ -10,7 +10,6 @@
     "server:install": "cd ./server && npm i",
     "server:build": "cd ./server && npm run build",
     "server:dev": "cd ./server && npm run dev",
-    "dev": "concurrently \"npm run server:dev\" \"wait-on tcp:3333 && npm run client:dev\"",
     "seed": "cd ./server && npm run seed",
     "start": "node ./server/dist/server.js",
     "install": "cd ./server && npm i",
@@ -18,7 +17,7 @@
     "save": "git add -A && git commit -m \"ready for deploy\"",
     "push": "git push origin HEAD:main",
     "deploy": "npm run client:build && npm run server:build && npm run save && npm run push",
-    "render-build": "npm run install:all && npm run client:build && npm run server:build"
+    "render-build": "npm run install:all && concurrently \"npm run client:build\" \"npm run server:build\""
 
   },
   "keywords": [],
