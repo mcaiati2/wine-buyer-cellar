@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
-import { useNavigate, useLocation, NavLink } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const initialFormData = {
   brand: '',
