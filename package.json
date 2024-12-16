@@ -1,5 +1,5 @@
 {
-  "name": "recipe_master",
+  "name": "wine_buyer_cellar",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,10 +14,11 @@
     "seed": "cd ./server && npm run seed",
     "start": "node ./server/dist/server.js",
     "install": "cd ./server && npm i",
-    "install:all": "npm i && concurrently \"npm run client:install\" \"npm run server:install\"",
+    "install:all": "npm run client:install && npm run server:install",
     "save": "git add -A && git commit -m \"ready for deploy\"",
     "push": "git push origin HEAD:main",
-    "deploy": "npm run client:build && npm run server:build && npm run save && npm run push"
+    "deploy": "npm run install:all && npm run client:build && npm run server:build && npm run save && npm run push",
+    "render-build": "npm run install:all && npm run client:build && npm run server:build"
   },
   "keywords": [],
   "author": "",
