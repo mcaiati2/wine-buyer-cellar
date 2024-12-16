@@ -8,7 +8,7 @@ Wine Buyer Cellar is a comprehensive wine inventory management application desig
 - **Shop Management**: Create, edit, and delete shops.
 - **Wine Inventory**: Add, view, and manage wines within each shop.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
-- **Translucent UI Elements**: Modern and visually appealing design with translucent UI elements
+- **Translucent UI Elements**: Modern and visually appealing design with translucent UI elements.
 
 ## Technologies Used
 
