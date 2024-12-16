@@ -1,28 +1,30 @@
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import express from 'express';
-import {client} from './models/index.js';
-// A package to help pull cookies from the client/browser request obj
 import cookieParser from 'cookie-parser';
-
-import routes from './routes/api/index.js';
-
-dotenv.config();
-
+import path from 'path';
+import routes from './routes/api/index.js'
+import { client } from './models/index.js';
 
 const app = express();
 const PORT = process.env.PORT || 3333;
 
-/* MiddleWare - Some additional functionality to our routes or opening/closing layers of access */
-
-// Allow json to be sent from the client/browser to our routes through req.body
 app.use(express.json());
 
-// Allow us to use req.cookies in our routes to get the client/browser jwt token
 app.use(cookieParser());
 
-// Load all of our routes
 app.use('/', routes);
 
-// Sync all of our models to create the database tables (Users, Shops and Wines)
+if (process.env.PORT) {
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = dirname(__filename);
+
+  app.use(express.static(path.join(__dirname, '../../client/dist')));
+  app.get('*', (_, res) => {
+    res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
+  })
+}
+
 await client.sync({ force: false });
 
 app.listen(PORT, () => console.log('Express server started'));
