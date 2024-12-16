@@ -3,14 +3,13 @@ import { dirname } from 'path';
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import path from 'path';
-import routes from './routes/api/index.js'
-import { client } from './models/index.js';
+import routes from './routes/api/index.js';
+import client from './config/connection.js'; // Ensure this import is correct
 
 const app = express();
 const PORT = process.env.PORT || 3333;
 
 app.use(express.json());
-
 app.use(cookieParser());
 
 app.use('/', routes);
@@ -22,9 +21,16 @@ if (process.env.PORT) {
   app.use(express.static(path.join(__dirname, '../../client/dist')));
   app.get('*', (_, res) => {
     res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
-  })
+  });
 }
 
-await client.sync({ force: false });
-
-app.listen(PORT, () => console.log('Express server started'));
+client.sync({ force: false })
+  .then(() => {
+    console.log('Database connected successfully');
+    app.listen(PORT, () => {
+      console.log(`Express server started on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error('Unable to connect to the database:', err);
+  });
