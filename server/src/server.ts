@@ -31,6 +31,6 @@ client.sync({ force: false })
       console.log(`Express server started on port ${PORT}`);
     });
   })
-  .catch((err) => {
+  .catch((err: Error) => {
     console.error('Unable to connect to the database:', err);
   });
