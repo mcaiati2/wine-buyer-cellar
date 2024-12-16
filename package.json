@@ -14,7 +14,7 @@
     "dev": "concurrently \"npm run server:dev\" \"wait-on tcp:3333 && npm run client:dev\"",
     "seed": "cd ./server && npm run seed",
     "start": "node ./server/dist/server.js",
-    "render:install": "cd ./server && npm i",
+    "render:install": "cd ./server && npm i && cd ../client && npm i",
     "install": "cd ./server && npm i && cd ../client && npm i",
     "cypress:test": "npx cypress run --browser chrome",
     "cypress": "npx cypress open",
