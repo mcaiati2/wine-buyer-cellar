@@ -3,14 +3,16 @@ import { dirname } from 'path';
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import path from 'path';
-import routes from './routes/api/index.js';
+import routes from './routes/api/index.js'
 import { client } from './models/index.js';
 
 const app = express();
 const PORT = process.env.PORT || 3333;
 
 app.use(express.json());
+
 app.use(cookieParser());
+
 app.use('/', routes);
 
 if (process.env.PORT) {
@@ -20,14 +22,9 @@ if (process.env.PORT) {
   app.use(express.static(path.join(__dirname, '../../client/dist')));
   app.get('*', (_, res) => {
     res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
-  });
+  })
 }
 
-try {
-  await client.sync({ force: false });
-  console.log('Database synced successfully');
-} catch (error) {
-  console.error('Error syncing database:', error);
-}
+await client.sync({ force: false });
 
-app.listen(PORT, () => console.log(`Express server started on port ${PORT}`));
+app.listen(PORT, () => console.log('Express server started'));
