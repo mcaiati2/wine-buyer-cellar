@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "wine_buyer_cellar",
-=======
-  "name": "recipe_master",
->>>>>>> b48650eeeeed5432e350db374123110ed5146985
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
