@@ -12,7 +12,7 @@ client = process.env.DB_URL ? new Sequelize(process.env.DB_URL, {
 }) : new Sequelize({
   username: 'postgres',
   password: 'pass',
-  database: 'wine_buyer_cellar',
+  database: 'wine_database_2',
   host: 'localhost',
   dialect: 'postgres',
   logging: false,
